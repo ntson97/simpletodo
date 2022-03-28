@@ -1,13 +1,89 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+* {
+  box-sizing: border-box;
+}
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.container {
+  width: 600px;
+  max-width: 100%;
+  margin: auto;
+}
+.header {
+  font-weight: 400;
+  font-size: xx-large;
+  text-transform: uppercase;
+  text-align: center;
+}
+.todo-list {
+}
+.todo-input {
+  display: inline-block;
+  width: 100%;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+.todo-input:focus {
+  outline: none;
+}
+.todo-item {
+  padding: 10px 0px;
+  border-bottom: 1px solid #ccc;
+}
+.todo-footer {
+  background-color: #f4fce8;
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 5px 0;
+}
+.clearfix::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.action,
+.status {
+  display: inline-block;
+  padding: 5px 10px;
+  color: #aaa;
+}
+
+.status {
+  border-left: 1px solid #aaa;
+}
+
+.action:hover {
+  color: rgb(140, 183, 226);
+  cursor: pointer;
+}
+.action-border:hover {
+  border: 1px solid #ccc;
+}
+.action-selected {
+  color: rgb(0, 0, 0);
+}
+.todo-done label {
+  text-decoration: line-through;
+}
+.d-none {
+  display: none;
+}
+.d-block {
+  display: block;
 }
